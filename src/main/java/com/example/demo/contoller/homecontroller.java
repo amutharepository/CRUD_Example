@@ -23,7 +23,7 @@ public class homecontroller {
 	
 	@GetMapping("/index")
 	public String index() {
-		return "welcome to index";	
+		return "welcome to index of crud operation";	
 	}
 	
 	@PostMapping("/posting")
@@ -44,15 +44,15 @@ public class homecontroller {
 		Student st=sr.findById(rollno).get();
 		if(st!=null) {
 			sr.delete(st);
-		}
+		}	
 		
 		return "deleted successfully";
 	}
 	@PutMapping("/update")
-	public Student update(@RequestBody Student rollno) {	
+	public Student update(@RequestBody Student address) {	
 		
-	sr.save(rollno);
-		return rollno;
+	sr.save(address);
+		return address;
 	}
 
 }
